@@ -20,7 +20,7 @@
 <body background="background.jpg">
 
 <%
-    /*int userId = 0;
+    int userId = 0;
     HttpSession session1 = request.getSession(false);
     if (session1!=null){
         if(session1.getAttribute("userId")!=null){
@@ -28,7 +28,7 @@
         }else
             response.sendRedirect("login.jsp");
     }
-*/
+
 %>
 
 
@@ -84,32 +84,33 @@
 <div class="col-lg-3"></div>
 <div class="col-lg-6">
 
-    <form action="postjob"method="post"style="text-align: center;color: white;background-color: #4f1a15" >
+    <form action="postjob"method="post"style="text-align:center;color: white;background-color: #4f1a15;margin-top: 50px" >
 
 
 
 
-        Title <input type="text"style="margin-left: 40px;margin-top: 10px" name="title"/><br>
+        Title <input type="text"style="margin-left: 70px;margin-top: 10px" name="title"/><br>
 
-        description <input type="text"style="margin-left: 40px;margin-top: 10px" name="description"/><br>
-        <div>
-            <label>Gender</label>
+        description <input type="text"style="margin-left: 30px;margin-top: 10px" name="description"/><br>
 
-            <input type="radio" name="gender" value="male"> Full Time<br>
-            <input type="radio" name="gender" value="female">part Time <br>
+        <div style="margin-top: 15px;">
+
+            <label> Job Type</label>
+            <input type="radio" name="jobtype" value="Full Time" > Full Time
+            <input type="radio" name="jobtype" value="Part Time" checked>part Time
         </div>
 
 
-
-        <label> City</label>
-        <select name="Qualification">
-            <option value="misb">Islamabad</option>
-            <option value="kar">Karachi</option>
-            <option value="lah">Lahore</option>
+<div style="margin-top: 15px;">
+        <label> Job City</label>
+        <select name="jobcity">
+            <option value="Islamabad"selected>Islamabad</option>
+            <option value="karachi">Karachi</option>
+            <option value="Lahore">Lahore</option>
 
         </select>
 
-
+</div>
 
 
 

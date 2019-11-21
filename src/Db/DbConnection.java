@@ -47,17 +47,18 @@ public class DbConnection {
     }
 
 
-    public int insertJob(String title,String description,String jobtype,String jobcity,String posttime){
+    public int insertJob(String title,String description,String jobtype,String jobcity,String posttype,int postedby){
         try {
-            String sqlQuery = "INSERT INTO job(title,description,jobtype,jobcity,postime)";
-            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
-            preparedStatement.setString(1, title);
-            preparedStatement.setString(2, description);
-            preparedStatement.setString(3, jobtype);
+            String sQuery = "INSERT INTO jobs(title,description,jobtype,jobcity,posttype,postedby)VALUES(?,?,?,?,?,?)";
+            PreparedStatement pStatement = connection.prepareStatement(sQuery);
+            pStatement.setString(1, title);
+            pStatement.setString(2, description);
+            pStatement.setString(3, jobtype);
+            pStatement.setString(4, jobcity);
+            pStatement.setString(5, posttype);
+            pStatement.setInt(6, postedby);
 
-
-
-            int noOfRowsInserted = preparedStatement.executeUpdate();
+            int noOfRowsInserted = pStatement.executeUpdate();
             if(noOfRowsInserted>0){
                 System.out.println(noOfRowsInserted + " rows inserted Successfully!");
                 return noOfRowsInserted;

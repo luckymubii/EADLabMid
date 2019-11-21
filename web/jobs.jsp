@@ -54,7 +54,7 @@
             <li class="nav-item active"style="margin-left: 20px; ">
                 BSE 163056
             </li>
-            <li class="nav-item"style="margin-left: 40px; ">
+            <li class="nav-item"style="margin-left: 40px;font-size: large; ">
                 M Mubasher
             </li>
 
@@ -69,12 +69,12 @@
             </li>
 
             <li class="nav-item">
-                <a class="btn btn-success"class="nav-link" href="postJob.jsp"style="margin-left: 50px; ">Post Job</a>
+                <a class="btn btn-success"class="nav-link" href="postJob.jsp"style="margin-left: 80px; color:red">Post Job</a>
             </li>
 
             <li class="nav-item">
                 <form action="logout" method="post">
-                    <button type="submit"class="btn btn-danger"style="margin-left: 70px; ">logout</button>
+                    <button type="submit"class="btn btn-danger"style="margin-left: 90px; ">logout</button>
                 </form>
             </li>
 
@@ -116,10 +116,10 @@
                   <td><%=result.getInt("jobid") %></td>
                 <td><%=result.getString("title") %></td>
                 <td><%=result.getString("description") %></td>
-                                <td><%=result.getInt("jobtype") %></td>
+                                <td><%=result.getString("jobtype") %></td>
                                 <td><%=result.getString("jobcity") %></td>
                                 <td><%=result.getString("posttype") %></td>
-                                <td><%=result.getString("postedby") %></td>
+                                <td><%=result.getInt("postedby") %></td>
                 </tr>
 
 

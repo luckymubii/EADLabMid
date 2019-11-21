@@ -13,6 +13,19 @@
     <title>jobs</title>
 </head>
 <body>
+
+<%
+    int userId = 0;
+    HttpSession session1 = request.getSession(false);
+    if (session1!=null){
+        if(session1.getAttribute("userId")!=null){
+            userId = (int)session1.getAttribute("userId");
+        }else
+            response.sendRedirect("login.jsp");
+    }
+
+%>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">

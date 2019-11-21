@@ -15,24 +15,10 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession();
         if(session!=null){
             session.invalidate();
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("login.jsp");
         }
 
-        /*Cookie loginCooke = null;
-        Cookie[] cookies = request.getCookies();
-        if(cookies!=null){
-            for(Cookie cookie : cookies){
-                if(cookie.getName().equals("email")){
-                    loginCooke = cookie;
-                    break;
-                }
-            }
-        }
-        if(loginCooke!=null){
-            loginCooke.setMaxAge(0);
-            response.addCookie(loginCooke);
-            response.sendRedirect("index.jsp");
-        }*/
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

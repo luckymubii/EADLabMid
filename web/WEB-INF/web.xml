@@ -18,6 +18,15 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>PostJobServlet</servlet-name>
+        <servlet-class>servlets.PostJobServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/postjob</url-pattern>
+    </servlet-mapping>
+
 
 
     <servlet>
@@ -44,7 +53,7 @@
     </filter>
     <filter-mapping>
         <filter-name>LoggingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/login</url-pattern>
     </filter-mapping>
 
     <filter>
@@ -53,7 +62,7 @@
     </filter>
     <filter-mapping>
         <filter-name>AuthFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/ABC</url-pattern>
     </filter-mapping>
 
 </web-app>

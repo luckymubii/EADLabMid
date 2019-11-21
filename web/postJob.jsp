@@ -13,14 +13,14 @@
 <body>
 
 
-<form action="signup"method="post"style="text-align: center;color: white;background-color: #4f1a15" >
+<form action="postjob"method="post"style="text-align: center;color: white;background-color: #4f1a15" >
 
 
 
 
-    Title <input type="text"style="margin-left: 40px;margin-top: 10px" name="username"/><br>
+    Title <input type="text"style="margin-left: 40px;margin-top: 10px" name="title"/><br>
 
-    description <input type="text"style="margin-left: 40px;margin-top: 10px" name="password"/><br>
+    description <input type="text"style="margin-left: 40px;margin-top: 10px" name="description"/><br>
     <div>
         <label>Gender</label>
 

@@ -1,4 +1,6 @@
-<%--
+<%@ page import="Db.DbConnection" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.io.PrintWriter" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 11/21/2019
@@ -31,6 +33,23 @@
 </div>
 
 
+<table>
+    <tr>
+
+
+        <td>Job Id</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Job Type</td>
+        <d>Job City</d>
+        <td>PostType</td>
+        <td>Postedby</td>
+
+
+    </tr>
+
+
+</table>
 
 
 </body>

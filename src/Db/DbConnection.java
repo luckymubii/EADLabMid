@@ -47,6 +47,28 @@ public class DbConnection {
     }
 
 
+    public int insertJob(String title,String description,String jobtype,String jobcity,String posttime){
+        try {
+            String sqlQuery = "INSERT INTO job(title,description,jobtype,jobcity,postime)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+            preparedStatement.setString(1, title);
+            preparedStatement.setString(2, description);
+            preparedStatement.setString(3, jobtype);
+
+
+
+            int noOfRowsInserted = preparedStatement.executeUpdate();
+            if(noOfRowsInserted>0){
+                System.out.println(noOfRowsInserted + " rows inserted Successfully!");
+                return noOfRowsInserted;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
+        }
+        return  0;
+    }
+
 
 
 

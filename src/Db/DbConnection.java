@@ -109,4 +109,18 @@ public class DbConnection {
             return result;
         }
     }
+
+    public ResultSet displayJobRecords(){
+        ResultSet result = null;
+        try {
+            String sqlQuery = "SELECT * FROM jobs";
+            Statement statement = connection.createStatement();
+            result = statement.executeQuery(sqlQuery);
+            return result;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return result;
+        }
+    }
 }

@@ -14,6 +14,23 @@
 <body>
 <marquee style="color:white" bgcolor=green direction=right behavior=alternate scrollamount=7><h2><b><i>I CAN is 100 <span style="color:red">times more important than  IQ</span></i></b></h2></marquee></center>
 
+
+<script>
+
+function ClearData(){
+
+
+
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+
+document.getElementById("password").value="";
+
+
+}
+</script>
+
+
 <h1 style="color: fuchsia;text-align: center"><b> Register</b></h1>
 <hr style="background-color: white">
 <div class="row">
@@ -35,11 +52,13 @@
                 <button type="submit"  style="background-color:black;margin-left: 29px;color: antiquewhite;">Submit</button>
 
             </div>
-
+            <a href="login.jsp">Login</a>
             <hr style="background-color: black;">
         </form >
-        <button type="button"  style="background-color:black;margin-left: 29px;color: antiquewhite;">Reset</button>
+        <button type="button" ONCLICK="ClearData()"style="color:orange" >Reset </button>
     </div>
     <div class="col-lg-4"></div>
+    </div>
+
 </body>
 </html>

@@ -6,7 +6,7 @@ import java.sql.*;
  * Created by Lucky Ali 10/16/2019.
  */
 public class DbConnection {
-    private String dbURL = "jdbc:mysql://localhost:3306/eadlab4";
+    private String dbURL = "jdbc:mysql://localhost:3306/eadlabmid";
     private String username = "root";
     private String password = "";
     private Connection connection;
@@ -24,19 +24,14 @@ public class DbConnection {
         }
     }
 
-    public int insertData(String firstname,String lastname,String phonenumber,String email,String addressline1,String addressline2,String city,String state,int zipcode){
+    public int insertData(String name,String email,String password){
         try {
-            String sqlQuery = "INSERT INTO student(firstname,lastname,phonenumber,email,addressline1,addressline2,city,state,zipcode) VALUES(?,?,?,?,?,?,?,?,?)";
+            String sqlQuery = "INSERT INTO user(name,email,password) VALUES(?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
-            preparedStatement.setString(1, firstname);
-            preparedStatement.setString(2, lastname);
-            preparedStatement.setString(3, phonenumber);
-            preparedStatement.setString(4, email);
-            preparedStatement.setString(5, addressline1);
-            preparedStatement.setString(6, addressline2);
-            preparedStatement.setString(7, city);
-            preparedStatement.setString(8, state);
-            preparedStatement.setInt(9, zipcode);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, email);
+            preparedStatement.setString(3, password);
+
 
 
             int noOfRowsInserted = preparedStatement.executeUpdate();

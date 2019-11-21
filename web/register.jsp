@@ -27,16 +27,18 @@
 
             <br>
             <div>
-                <button type="submit"  style="background-color:black;margin-left: 29px;color: antiquewhite;">Submit</button>
-                <button type="button"  style="background-color:black;margin-left: 29px;color: antiquewhite;">Reset</button>
-            </div>
-            <div>
 
                 <input type="checkbox" name="term" value="abc"> I ACCEPT term and agreement
 
             </div>
+            <div>
+                <button type="submit"  style="background-color:black;margin-left: 29px;color: antiquewhite;">Submit</button>
+
+            </div>
+
             <hr style="background-color: black;">
         </form >
+        <button type="button"  style="background-color:black;margin-left: 29px;color: antiquewhite;">Reset</button>
     </div>
     <div class="col-lg-4"></div>
 </body>

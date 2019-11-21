@@ -11,7 +11,7 @@
     <link href="bootstrap.css" rel="stylesheet" type="text/css">
     <title>Title</title>
 </head>
-<body>
+<body >
 <marquee style="color:white" bgcolor=green direction=right behavior=alternate scrollamount=7><h2><b><i>I CAN is 100 <span style="color:red">times more important than  IQ</span></i></b></h2></marquee></center>
 
 
@@ -19,7 +19,7 @@
 
 function ClearData(){
 
-
+alert("in clear");
 
 document.getElementById("name").value="";
 document.getElementById("email").value="";
@@ -37,10 +37,10 @@ document.getElementById("password").value="";
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
         <form action="signup"method="post"style="text-align: center;color: white;background-color: #4f1a15" >
-            Name <input type="text"style="margin-left: 40px;margin-top: 10px" name="name"/><br>
+            Name <input type="text"style="margin-left: 40px;margin-top: 10px" name="name" id="name"/><br>
 
-            Email <input type="text" style="margin-left: 71px;margin-top: 10px" name="email"/><br>
-            Password <input type="password" style="margin-left: 14px;margin-top: 10px" name="password"/><br>
+            Email <input type="text" style="margin-left: 71px;margin-top: 10px" name="email" id="email"/><br>
+            Password <input type="password" style="margin-left: 14px;margin-top: 10px" name="password" id="password"/><br>
 
             <br>
             <div>
@@ -52,7 +52,7 @@ document.getElementById("password").value="";
                 <button type="submit"  style="background-color:black;margin-left: 29px;color: antiquewhite;">Submit</button>
 
             </div>
-            <a href="login.jsp">Login</a>
+            <a href="login.jsp">already have an accout? Login</a>
             <hr style="background-color: black;">
         </form >
         <button type="button" ONCLICK="ClearData()"style="color:orange" >Reset </button>

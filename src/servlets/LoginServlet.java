@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("jobs.jsp");
 
         }else {
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
             PrintWriter out = response.getWriter();
             out.write("<p style='color:red;'>Invalid Username or Password</p>");
             rd.include(request,response);

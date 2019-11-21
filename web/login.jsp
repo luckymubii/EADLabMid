@@ -10,7 +10,7 @@
 <head>
     <title>Login</title>
 </head>
-<body>
+<body background="background.jpg">
 <marquee style="color:white" bgcolor=green direction=right behavior=alternate scrollamount=7><h2><b><i>I CAN is 100 <span style="color:red">times more important than  IQ</span></i></b></h2></marquee></center>
 
 <h1 style="color: fuchsia;text-align: center"><b> Login</b></h1>

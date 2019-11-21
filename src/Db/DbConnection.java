@@ -45,6 +45,11 @@ public class DbConnection {
         }
         return  0;
     }
+
+
+
+
+
     public void update(String username,String password,String firstname,String lastname,String dofbirth,String emailaddress,String username1){
         try {
             String sqlQuery = "UPDATE student Set username=?, password=?, firstname=?, lastname=?, dofbirth=?,emailaddress=? WHERE username=?";
@@ -72,7 +77,7 @@ public class DbConnection {
     public ResultSet displayRecords(){
         ResultSet result = null;
         try {
-            String sqlQuery = "SELECT * FROM student";
+            String sqlQuery = "SELECT * FROM user";
             Statement statement = connection.createStatement();
             result = statement.executeQuery(sqlQuery);
             return result;
